@@ -32,7 +32,10 @@ const Navbar = () => {
                     <Link to="/blog" className="nav-link">Blog</Link>
                     <Link to="/contact" className="nav-link">Contact Us</Link>
                 </nav>
-                <div className="navbar-actions">
+                <div className="navbar-actions" style={{ display: 'flex', alignItems: 'center' }}>
+                    <Link to="/login" className="nav-link" style={{ marginRight: '1.5rem', fontWeight: '600' }}>
+                        Masuk
+                    </Link>
                     <Link to="/donate" className="btn btn-primary">
                         <Heart size={16} fill="white" />
                         Donasi Sekarang

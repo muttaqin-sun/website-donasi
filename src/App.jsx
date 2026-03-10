@@ -14,6 +14,7 @@ import FAQ from './pages/FAQ';
 import Transparency from './pages/Transparency';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/transparency" element={<Transparency />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </main>
         <Footer />
