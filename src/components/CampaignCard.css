@@ -1,0 +1,169 @@
+.campaign-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.campaign-image-container {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.campaign-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.campaign-card:hover .campaign-img {
+    transform: scale(1.05);
+}
+
+.campaign-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.campaign-meta {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+}
+
+.category-tag {
+    color: var(--primary);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.campaign-title {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.campaign-title:hover {
+    color: var(--primary);
+}
+
+.campaign-author-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.author-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.days-left {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.campaign-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.progress-section {
+    position: relative;
+    margin-top: auto;
+}
+
+.progress-label-container {
+    position: relative;
+    height: 24px;
+}
+
+.progress-percentage {
+    position: absolute;
+    top: 0;
+    background-color: var(--secondary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.progress-percentage::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px 4px 0;
+    border-style: solid;
+    border-color: var(--secondary) transparent transparent transparent;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 4px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--secondary);
+    border-radius: 2px;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.stat-item {
+    color: var(--text-muted);
+}
+
+.stat-item strong {
+    color: var(--text-main);
+    display: inline-block;
+    margin-left: 0.25rem;
+}
+
+.stat-item.raised strong {
+    color: var(--primary);
+}

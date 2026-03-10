@@ -1,0 +1,128 @@
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem 0 5rem 0;
+}
+
+.step-column {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+.donor-column {
+    border-top: 5px solid var(--primary);
+}
+
+.fundraiser-column {
+    border-top: 5px solid var(--teal-darker);
+}
+
+.column-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.column-header h2 {
+    color: var(--teal-darker);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.column-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+/* Connecting line */
+.step-list::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: var(--text-main);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.donor-column .step-number {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.fundraiser-column .step-number {
+    border-color: var(--teal-darker);
+    color: var(--teal-darker);
+}
+
+.step-icon-box {
+    margin-top: 6px;
+    color: var(--text-muted);
+}
+
+.step-content {
+    padding-bottom: 1rem;
+}
+
+.step-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.step-content p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .how-it-works-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .step-column {
+        padding: 2rem 1.5rem;
+    }
+}

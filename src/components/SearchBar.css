@@ -1,0 +1,146 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: stretch;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 800px;
+    height: 64px;
+    overflow: hidden;
+}
+
+.category-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 30%;
+    background-color: white;
+}
+
+.category-select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--text-main);
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+}
+
+.select-icon {
+    position: absolute;
+    right: 1.5rem;
+    pointer-events: none;
+    color: var(--text-muted);
+}
+
+.search-divider {
+    width: 1px;
+    height: 32px;
+    background-color: var(--border-color);
+    align-self: center;
+}
+
+.search-input-wrapper {
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    padding: 0 1.5rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--text-main);
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #adb5bd;
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0 1.5rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.search-btn:hover {
+    transform: scale(1.1);
+}
+
+.popular-searches {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.popular-label {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.popular-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.popular-tags a {
+    color: var(--primary);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.popular-tags a:hover {
+    text-decoration: underline;
+    color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .category-dropdown {
+        width: 100%;
+        height: 54px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .search-divider {
+        display: none;
+    }
+
+    .search-input-wrapper {
+        height: 54px;
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,149 @@
+.footer {
+    background-color: var(--teal-darker);
+    color: white;
+    padding: 4rem 0 0 0;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo .logo-text {
+    color: white;
+}
+
+.footer-desc {
+    color: #adb5bd;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: var(--secondary);
+    color: var(--teal-darker);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    background-color: white;
+}
+
+.footer-title {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #adb5bd;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-post {
+    margin-bottom: 1.25rem;
+}
+
+.footer-post a {
+    display: block;
+    color: white;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-post a:hover {
+    color: var(--primary);
+}
+
+.post-date {
+    font-size: 0.85rem;
+    color: #adb5bd;
+}
+
+.location-info strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.location-info p {
+    color: #adb5bd;
+    font-size: 0.95rem;
+}
+
+.footer-bottom {
+    background-color: var(--secondary);
+    color: var(--teal-darker);
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
